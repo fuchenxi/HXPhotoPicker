@@ -180,7 +180,11 @@ static id instance;
                 }else if ([language hasPrefix:@"ko"]) {
                     // 韩文
                     language = @"ko";
-                }else {
+                }else if ([language hasPrefix:@"ar"]) {
+                    // 阿语
+                    language = @"ar";
+                }
+                else {
                     language = @"en";
                 }
             }break;
