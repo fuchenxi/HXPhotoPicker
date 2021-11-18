@@ -659,7 +659,8 @@ NSString *const hx_kKeyContentIdentifier = @"com.apple.quicktime.content.identif
 }
 + (BOOL)isRTLLanguage
 {
-    return [NSLocale characterDirectionForLanguage:[[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]] == NSLocaleLanguageDirectionRightToLeft;
+    return [[[[NSUserDefaults standardUserDefaults] objectForKey:@"AppleLanguages"] objectAtIndex:0] isEqualToString:@"ar"];
+//    return [NSLocale characterDirectionForLanguage:[[NSLocale currentLocale] objectForKey:NSLocaleLanguageCode]] == NSLocaleLanguageDirectionRightToLeft;
 }
 
 + (BOOL)fileExistsAtVideoURL:(NSURL *)videoURL {
